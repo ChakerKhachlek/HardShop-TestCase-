@@ -19,7 +19,7 @@
                                     @endauth
                                     <b class="caret"></b></a>
                                 <ul class="dropdown-menu animated fadeInUp">
-                                <li><a href="{{route('welcome.view') }}">Shop</a></li>
+                                <li><a href="{{route('shop.home') }}">Shop</a></li>
                                     <li >
                                         <a  href="{{ route('logout') }}"
                                            onclick="event.preventDefault();

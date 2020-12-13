@@ -10,8 +10,9 @@ class ShopHomeComponent extends Component
     public $products;
 
     public function mount(){
-        $this->products = Product::all()->shuffle();
+        $this->products = Product::all();
     }
+    
     public function render()
     {
         return view('livewire.shop.shop-home-component') 

@@ -17,6 +17,8 @@ Auth::routes();
 
 
 Route::get('/', \App\Http\Livewire\Shop\ShopHomeComponent::class)->name('shop.home');
+Route::get('/ConfigureYourPc', \App\Http\Livewire\Shop\ConfigurePcComponent::class)->name('shop.configPC');
+
 //Admin->auth Routes
 Route::get('/auth', [App\Http\Controllers\HomeController::class, 'auth'])->name('auth.view');
 
