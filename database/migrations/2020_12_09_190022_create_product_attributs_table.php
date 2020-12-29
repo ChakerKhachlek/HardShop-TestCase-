@@ -17,8 +17,7 @@ class CreateProductAttributsTable extends Migration
             $table->increments('id');
             $table->string('name');
 
-            $table->foreignId('sub_category_id')
-            ->constrained('sub_categories')
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             

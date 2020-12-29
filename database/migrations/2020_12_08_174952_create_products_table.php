@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('image')->nullable();
             $table->boolean('isCustumizble')->nullable();
 
-            $table->foreignId('sub_category_id')
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')
             ->constrained('sub_categories')
             ->onUpdate('cascade')
             ->onDelete('cascade');
