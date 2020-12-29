@@ -14,7 +14,7 @@ class CreateProductAttributsTable extends Migration
     public function up()
     {
         Schema::create('product_attributs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->integer('sub_category_id')->unsigned();
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')
