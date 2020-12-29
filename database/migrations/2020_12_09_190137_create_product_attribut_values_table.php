@@ -14,16 +14,15 @@ class CreateProductAttributValuesTable extends Migration
     public function up()
     {
         Schema::create('product_attribut_values', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('value');
             
-            $table->foreignId('product_id')
-            ->constrained('products')
+            $table->foreign('product_id')
+            ->references('id')->on('products')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->integer('product_attribut_id')->unsigned();
             $table->foreign('product_attribut_id')->references('id')->on('productattributs')
-            ->onUpdate('cascade')
             ->onDelete('cascade');
             
 
