@@ -19,7 +19,7 @@ class CreateSubCategoriesTable extends Migration
             
             $table->foreignId('category_id')
             ->constrained('categories')
-            ->onUpdate('cascade')
+            
             ->onDelete('cascade');
 
             $table->timestamps();
