@@ -16,7 +16,7 @@ class CreateProductAttributsTable extends Migration
         Schema::create('product_attributs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-
+            $table->integer('sub_category_id')->unsigned();
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')
             ->onUpdate('cascade')
             ->onDelete('cascade');

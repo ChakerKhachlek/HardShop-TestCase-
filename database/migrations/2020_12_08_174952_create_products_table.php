@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->string('image')->nullable();
             $table->boolean('isCustumizble')->nullable();
-
+            $table->integer('sub_category_id')->unsigned();
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')
             
             ->onUpdate('cascade')
