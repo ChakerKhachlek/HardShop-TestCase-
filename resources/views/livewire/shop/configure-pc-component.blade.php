@@ -118,7 +118,7 @@
         
 
     @if(!empty($selectedCase))
-     <img class="card-img-top" src="{{asset('/storage/' .$selectedCaseInfo->image)}}" alt="">  
+     <img class="card-img-top" src="{{asset($selectedCaseInfo->image)}}" alt="">  
     @endif
     
  
