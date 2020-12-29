@@ -23,7 +23,8 @@ class CreateProductAttributValuesTable extends Migration
             ->onDelete('cascade');
 
             $table->integer('product_attribut_id')->unsigned();
-            $table->foreign('product_attribut_id')->references('id')->on('productattributs')
+            $table->foreign('product_attribut_id')->references('id')->on('product_attributs')
+            ->onUpdate('cascade')
             ->onDelete('cascade');
             
 
