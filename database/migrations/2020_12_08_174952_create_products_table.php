@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->boolean('isCustumizble')->nullable();
 
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')
-            ->constrained('sub_categories')
+            
             ->onUpdate('cascade')
             ->onDelete('cascade');
            
