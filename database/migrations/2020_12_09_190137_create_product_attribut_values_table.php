@@ -16,11 +16,12 @@ class CreateProductAttributValuesTable extends Migration
         Schema::create('product_attribut_values', function (Blueprint $table) {
             $table->increments('id');
             $table->string('value');
-            
+            $table->integer('product_id')->unsigned();
             $table->foreign('product_id')
             ->references('id')->on('products')
             ->onUpdate('cascade')
             ->onDelete('cascade');
+
             $table->integer('product_attribut_id')->unsigned();
             $table->foreign('product_attribut_id')->references('id')->on('productattributs')
             ->onDelete('cascade');
