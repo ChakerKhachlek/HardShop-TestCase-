@@ -32,7 +32,7 @@
                     <td>{{$row->description}}</td>
                     <td>{{$row->quantity}}</td>
                     <td>{{$row->price}}</td>
-                    <td><img src="{{asset('/storage/' .$row->image)}}" width="50" height="50"></td>
+                    <td><img src="{{asset($row->image)}}" width="50" height="50"></td>
                     <td>
                         @if($row->isCustumizble)
                         yes
